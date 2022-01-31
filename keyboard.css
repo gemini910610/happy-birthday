@@ -1,0 +1,154 @@
+.ui {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    font-family: consolas;
+}
+
+.keyboard {
+    position: relative;
+    top: calc(200px + 200px);
+    opacity: 0;
+    transition: 1s;
+    transition-timing-function: ease-in-out;
+}
+
+.keyboard span {
+    box-sizing: border-box;
+    position: relative;
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    padding: 8px 15px;
+    margin: 8px 4px;
+    border-radius: 10px;
+    background: linear-gradient(#282828, #202020);
+    box-shadow:
+        inset -8px 0 8px rgba(0, 0, 0, 0.15),
+        inset 0 -8px 8px rgba(0, 0, 0, 0.25),
+        0 0 0 2px rgba(0, 0, 0, 0.75),
+        10px 20px 25px rgba(0, 0, 0, 0.4);
+    overflow: hidden;
+}
+
+.keyboard span::before {
+    content: '';
+    position: absolute;
+    top: 3px;
+    left: 4px;
+    bottom: 14px;
+    right: 12px;
+    border-radius: 10px;
+    background: linear-gradient(90deg, #232323, #4a4a4a);
+    box-shadow:
+        -10px -10px 10px rgba(255, 255, 255, 0.25),
+        10px 5px 10px rgba(0, 0, 0, 0.15);
+    border-left: 1px solid #0004;
+    border-bottom: 1px solid #0004;
+    border-top: 1px solid #0009;
+}
+
+.keyboard span i {
+    position: relative;
+    color: #fff;
+    font-size: 1.5em;
+    font-style: normal;
+}
+
+#space {
+    width: 468px;
+}
+
+.typing {
+    letter-spacing: 1.5px;
+    font-size: 2em;
+}
+
+#shuffle {
+    position: relative;
+    z-index: -1;
+    color: darkgray;
+}
+
+#inputText {
+    position: absolute;
+    color: royalblue;
+    font-weight: bold;
+}
+
+#inputText::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: -3px;
+    width: 3px;
+    height: 100%;
+    background: royalblue;
+    animation: blinkCursor 1s infinite;
+}
+
+@keyframes blinkCursor {
+    0%, 50% {
+        opacity: 1;
+    }
+
+    51%, 100% {
+        opacity: 0;
+    }
+}
+
+.background {
+    position: absolute;
+    top: calc(88px - 200px);
+    height: 60px;
+    width: 500px;
+    border-radius: 35px;
+    z-index: -2;
+    background: royalblue;
+    box-shadow:
+        inset -8px 0 8px rgba(0, 0, 0, 0.15),
+        inset 0 -8px 8px rgba(0, 0, 0, 0.25),
+        0 0 0 2px rgba(0, 0, 0, 0.75),
+        10px 20px 25px rgba(0, 0, 0, 0.4);
+    transition: 1s;
+    transition-timing-function: ease-in-out;
+}
+
+.background::before {
+    content: '';
+    position: absolute;
+    top: 5px;
+    left: 102.5px;
+    height: 50px;
+    width: 390px;
+    border-radius: 25px;
+    z-index: -1;
+    background: lightgray;
+    box-shadow:
+        inset -8px 0 8px rgba(0, 0, 0, 0.15),
+        inset 0 -8px 8px rgba(0, 0, 0, 0.25),
+        0 0 0 2px rgba(0, 0, 0, 0.75),
+        10px 20px 25px rgba(0, 0, 0, 0.4);
+}
+
+.background i {
+    position: absolute;
+    left: 22.5px;
+    top: 10px;
+    color: black;
+    font-size: 2em;
+    font-style: normal;
+    font-weight: bold;
+}
+
+.textfield {
+    position: absolute;
+    top: calc(100px - 200px);
+    transition: 1s;
+    transition-timing-function: ease-in-out;
+}
+
+.empty {
+    visibility: hidden;
+}

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>生日快樂</title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="text3d.css">
+		<link rel="stylesheet" href="keyboard.css">
+		<link rel="stylesheet" href="firework.css">
+		<style></style>
+	</head>
+	<body>
+		<div class="text-3d">
+			<div id="happy" data-text="Happy">Happy</div>
+			<div id="birthday" data-text="Birthday">Birthday</div>
+		</div>
+		<div class="ui">
+			<div class="background"><i>CODE</i></div>
+			<div class="textfield">
+				<div class="typing">
+					<div id="inputText"></div>
+					<div id="shuffle"></div>
+				</div>
+			</div>
+			<div class="keyboard">
+				<span id="Q"><i>Q</i></span>
+				<span id="W"><i>W</i></span>
+				<span id="E"><i>E</i></span>
+				<span id="R"><i>R</i></span>
+				<span id="T"><i>T</i></span>
+				<span id="Y"><i>Y</i></span>
+				<span id="U"><i>U</i></span>
+				<span id="I"><i>I</i></span>
+				<span id="O"><i>O</i></span>
+				<span id="P"><i>P</i></span>
+				<span style="width: 80px;" class="empty"><i></i></span>
+				<br>
+				<span style="width: 32px;" class="empty"><i></i></span>
+				<span id="A"><i>A</i></span>
+				<span id="S"><i>S</i></span>
+				<span id="D"><i>D</i></span>
+				<span id="F"><i>F</i></span>
+				<span id="G"><i>G</i></span>
+				<span id="H"><i>H</i></span>
+				<span id="J"><i>J</i></span>
+				<span id="K"><i>K</i></span>
+				<span id="L"><i>L</i></span>
+				<br>
+				<span style="width: 88px;" class="empty"><i></i></span>
+				<span id="Z"><i>Z</i></span>
+				<span id="X"><i>X</i></span>
+				<span id="C"><i>C</i></span>
+				<span id="V"><i>V</i></span>
+				<span id="B"><i>B</i></span>
+				<span id="N"><i>N</i></span>
+				<span id="M"><i>M</i></span>
+				<br>
+				<span style="width: 280px;" class="empty"><i></i></span>
+				<span id="space"><i></i></span>
+			</div>
+		</div>
+		<div id="firework">
+			<script src="firework.js"></script>
+			<div class="firework-textField">
+				<div class="firework-text">華</div>
+				<div class="firework-text">涓</div>
+				<br>
+				<div class="firework-text">生</div>
+				<div class="firework-text">日</div>
+				<div class="firework-text">快</div>
+				<div class="firework-text">樂</div>
+			</div>
+		</div>
+		<div class="preserve-3d cake" onclick="cakeOnClick();">
+			<div class="preserve-3d candleTop"></div>
+			<div class="preserve-3d">
+				<script>
+					for (i = 0; i < 4; i++)
+					{
+						document.write('<span class="candle" style="--i:' + i + '"></span>');
+					}
+				</script>
+			</div>
+			<div class="preserve-3d cakeTop"></div>
+			<div class="preserve-3d">
+				<script>
+					textArr = ['生', '日', '快', '樂'];
+					for (i = 0; i < 4; i++)
+					{
+						document.write('<span class="preserve-3d cakeBody" style="--i:' + i + '"><h2>' + textArr[i] + '</h2><h2>' + textArr[i] + '</h2></span>');
+					}
+				</script>
+			</div>
+		</div>
+		<div id="gift">
+			<div class="preserve-3d gift" onclick="giftOnClick();">
+				<div class="preserve-3d giftTop"></div>
+				<div class="preserve-3d">
+					<script>
+						textArr = ['生', '日', '快', '樂'];
+						for (i = 0; i < 4; i++)
+						{
+							document.write('<span class="preserve-3d giftBody" style="--i:' + i + '"><h2>' + textArr[i] + '</h2><h2>' + textArr[i] + '</h2></span>');
+						}
+					</script>
+				</div>
+			</div>
+		</div>
+		<script src="text3d.js"></script>
+		<script src="keyboard.js"></script>
+		<script src="ribbon.js"></script>
+	</body>
+</html>
